@@ -13,10 +13,6 @@ export default async function addUser(payload) {
     }
     return true;
   } catch (e) {
-    console.log("error in adding registered");
-    return {
-      ok: false,
-      errors: e,
-    };
+    return false;
   }
 }

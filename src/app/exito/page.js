@@ -19,8 +19,9 @@ export default function page() {
         Tu registro se ha completado con éxito. Para finalizar el proceso, por
         favor revisa tu correo electrónico{" "}
         <span className="text-primary-600">({userEmail})</span> donde
-        encontrarás un enlace para acceder a tu tarjeta. En ese enlace, también
-        podrás guardar tu tarjeta en tu app de billetera.{" "}
+        encontrarás un enlace para acceder a tu tarjeta (Si no ves el correo en
+        tu bandeja, revisa la carpeta de SPAM). En ese enlace, también podrás
+        guardar tu tarjeta en tu app de billetera.{" "}
       </p>
       <p className="text-primary-600 text-xl text-center mt-5 font-bold d-block">
         ¡Gracias por unirte a nosotros!

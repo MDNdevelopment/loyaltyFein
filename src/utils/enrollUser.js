@@ -21,6 +21,7 @@ export default async function enrollUser(payload) {
 
     if (parsedResponse.error) {
       let error;
+      console.log(parsedResponse.error);
       if (parsedResponse.includes("is not valid")) {
         error = "El correo electrónico ingresado no es válido.";
       } else {
