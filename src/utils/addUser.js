@@ -1,18 +1,21 @@
-import callWebhook from "./callWebhook";
-
 export default async function addUser(payload) {
   try {
-    const response = await callWebhook(
-      process.env.NEXT_PUBLIC_URL_ADD,
-      payload
-    );
+    const response = await fetch("/api/add-user", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await response.json();
 
-    console.log(response);
-    if (!response.data.ok) {
+    if (!data.ok) {
       return false;
     }
     return true;
   } catch (e) {
-    return false;
+    console.log("error in adding registered");
+    return {
+      ok: false,
+      errors: e,
+    };
   }
 }
